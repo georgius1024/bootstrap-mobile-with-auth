@@ -7,6 +7,8 @@ www/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.sh
+*.cmd
 
 # Editor directories and files
 .idea/
