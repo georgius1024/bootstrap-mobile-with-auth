@@ -11,7 +11,16 @@ import App from './App'
 import store from './store'
 import router from './router'
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, { theme: {
+  primary: '#1E88E5',
+  secondary: '#FFA000',
+  accent: '#82B1FF',
+  error: '#FF5252',
+  info: '#2196F3',
+  success: '#4CAF50',
+  warning: '#FFC107'
+}})
+
 Vue.config.productionTip = false
 Vue.use(VueCordova)
 Vue.use(VueHead)

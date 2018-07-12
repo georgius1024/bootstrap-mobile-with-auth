@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import store from '@/store'
 /* eslint-disable */
 const Index = () => import('@/pages/index')
+const Demands = () => import('@/pages/demands')
+const Claims = () => import('@/pages/claims')
 const Login = () => import('@/pages/login')
 const LoginByEmail = () => import('@/pages/login-by-email')
 const Profile = () => import('@/pages/profile')
@@ -46,6 +48,18 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: Index,
+      beforeEnter: ifAuthenticated
+    },
+    {
+      path: '/demands',
+      name: 'Demands',
+      component: Demands,
+      beforeEnter: ifAuthenticated
+    },
+    {
+      path: '/claims',
+      name: 'Claims',
+      component: Claims,
       beforeEnter: ifAuthenticated
     },
     {

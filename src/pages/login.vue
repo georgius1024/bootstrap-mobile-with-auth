@@ -23,6 +23,7 @@
               @keyup.enter="login"
           ></v-text-field>
         </v-form>
+        <!--
         <v-divider class="my-4"></v-divider>
         <v-layout class="mt-4">
           <v-flex>
@@ -36,9 +37,10 @@
             </router-link>
           </v-flex>
         </v-layout>
+        -->
       </v-card-text>
       <v-card-actions>
-        <v-btn block color="primary" @click="login" :disabled="!valid">Войти</v-btn>
+        <v-btn block color="primary" @click="login">Войти</v-btn>
       </v-card-actions>
     </v-card>
   </v-flex>

@@ -1,18 +1,20 @@
 <template>
   <v-app>
     <toolbar @input="toolbarInput" v-model="drawer"/>
+
     <sidebar :items="menuItems" ref="sidebar" v-model="drawer"/>
+
     <loading-spinner :loading="loading"></loading-spinner>
     <message/>
     <bottom-nav />
-    <v-content class="mt-5">
+    <v-content>
       <router-view/>
     </v-content>
   </v-app>
 </template>
 <style>
   html {
-    overflow-y: auto
+    overflow-y: auto;
   }
   a {
     text-decoration-skip-ink: none;
@@ -86,10 +88,12 @@ export default {
           break
         case 422:
           statusMessage = 'Ошибка в данных'
-          let fieldsMessage = errorFields.map(e => e.message)
-          if (fieldsMessage.length) {
-            errorMessage += ': <ul><li>' + fieldsMessage.join('</li><li>') + '</li><ui>'
-            statusMessage = null
+          if (errorFields) {
+            let fieldsMessage = errorFields.map(e => e.message)
+            if (fieldsMessage.length) {
+              errorMessage += ': <ul><li>' + fieldsMessage.join('</li><li>') + '</li><ui>'
+              statusMessage = null
+            }
           }
           break
       }

@@ -2,36 +2,39 @@
   <v-bottom-nav
     :active.sync="bottomNav"
     :value="true"
-    absolute
     app
-    color="transparent"
   >
     <v-btn
       color="secondary"
       flat
-      value="recent"
+      value="news"
+      exact
+      :to="{name: 'Index'}"
     >
-      <span>Зона 1</span>
-      <v-icon>history</v-icon>
+      <span>Новости</span>
+      <v-icon>mdi-bell</v-icon>
     </v-btn>
 
     <v-btn
       color="secondary"
       flat
-      :to="{name: 'Profile'}"
-      value="favorites"
+      :to="{name: 'Demands'}"
+      exact
+      value="demands"
     >
-      <span>Зона 2</span>
-      <v-icon>favorite</v-icon>
+      <span>Заявки</span>
+      <v-icon>mdi-file-document-box</v-icon>
     </v-btn>
 
     <v-btn
       color="secondary"
       flat
-      value="nearby"
+      value="claims"
+      :to="{name: 'Claims'}"
+      exact
     >
-      <span>Зона 3</span>
-      <v-icon>place</v-icon>
+      <span>Жалобы</span>
+      <v-icon>mdi-alert</v-icon>
     </v-btn>
   </v-bottom-nav></template>
 <style>
@@ -44,7 +47,7 @@
     name: 'BottomNav',
     data () {
       return {
-        bottomNav: 'recent'
+        bottomNav: 'news'
       }
     }
   }

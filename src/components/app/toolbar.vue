@@ -1,8 +1,10 @@
 <template>
   <v-toolbar app color="primary" class="main-toolbar" dark prominent>
+      <!--
       <v-toolbar-side-icon
         @click="$emit('input', !value)"
       />
+      -->
 
     <v-toolbar-title>
       <router-link :to="{name: 'Index'}">
@@ -10,7 +12,7 @@
       </router-link>
     </v-toolbar-title>
 
-    <v-toolbar-title>{{config.APP_NAME}}</v-toolbar-title>
+    <v-toolbar-title class="mx-0">{{config.APP_NAME}}</v-toolbar-title>
     <v-spacer/>
     <v-toolbar-items class="ml-4">
       <v-menu offset-y v-if="isAuthenticated">
@@ -51,7 +53,7 @@
 </template>
 <style>
   .main-toolbar {
-    padding-bottom: 1px
+    padding-bottom: 1px;
   }
   .main-toolbar .v-toolbar__title {
     min-width: 64px !important;
@@ -61,7 +63,6 @@
     max-height: 50px !important;
     max-width: 50px !important;
     width: auto;
-    filter: grayscale(100%) contrast(0%) brightness(200%);
   }
 
 </style>

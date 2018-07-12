@@ -18,9 +18,11 @@
   "dependencies": {
     "@sinonjs/formatio": "^2.0.0",
     "axios": "^0.18.0",
+    "cordova-android": "^7.1.0",
     "cordova-plugin-device": "^2.0.2",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",
+    "moment-timezone": "^0.5.21",
     "uuid": "^3.2.1",
     "vue": "^2.5.16",
     "vue-cordova": "^0.1.2",
@@ -93,6 +95,8 @@
     "plugins": {
       "cordova-plugin-device": {}
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
   }
 }

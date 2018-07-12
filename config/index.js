@@ -23,6 +23,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
+    host: '0.0.0.0', // can be overwritten by process.env.HOST
     port: 8080,
     autoOpenBrowser: false,
     assetsSubDirectory: 'static',
